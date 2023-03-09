@@ -56,7 +56,7 @@
       </div>
 
       <!-- BODY -->
-      <div class="navbar navbar-expand-lg hide" id="opened-body">
+      <div class="navbar navbar-expand-lg" id="opened-body">
         <div class="container-fluid justify-content-start" style="padding:0">
           <button onclick=closeBody()>▼</button>
           <div id="bodyText">
@@ -106,10 +106,19 @@
             </div>
 
             <!-- PROJECTS -->
-            <div class="navbar navbar-expand-lg">
+            <div class="navbar navbar-expand-lg hide" id="closed-projects">
               <div class="container-fluid justify-content-start" style="padding:0">
-                <button id="projectsButton" onclick=switchProjects()>›</button>
-                <div id="projectsText">
+                <button onclick=openProjects()>▲</button>
+                <div>
+                  <p>&lt;div <span class="id">id=</span><span>"projects"</span>&gt;&lt;/div&gt;</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="navbar navbar-expand-lg" id="opened-projects">
+              <div class="container-fluid justify-content-start" style="padding:0">
+                <button onclick=closeProjects()>▼</button>
+                <div>
                   <p>&lt;div <span class="id">id=</span><span>"projects"</span>&gt;</p>
                   <ol class="text">
                     <li>Lorem Ipsum</li>
@@ -125,20 +134,20 @@
             </div>
 
             <!-- CONTACTS -->
-            <div class="navbar navbar-expand-lg" id="closed-currently">
+            <div class="navbar navbar-expand-lg" id="closed-contacts">
               <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=openCurrently()>▲</button>
-                <div id="currentlyText">
-                  <p>&lt;div <span class="id">id=</span><span>"currently"</span>&gt;&lt;/div&gt;</p>
+                <button onclick=openContacts()>▲</button>
+                <div>
+                  <p>&lt;div <span class="id">id=</span><span>"contacts"</span>&gt;&lt;/div&gt;</p>
                 </div>
               </div>
             </div>
 
-            <div class="navbar navbar-expand-lg hide" id="opened-currently">
+            <div class="navbar navbar-expand-lg hide" id="opened-contacts">
               <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=closeCurrently()>▼</button>
-                <div id="currentlyText">
-                  <p>&lt;div <span class="id">id=</span><span>"currently"</span>&gt;</p>
+                <button onclick=closeContacts()>▼</button>
+                <div>
+                  <p>&lt;div <span class="id">id=</span><span>"contacts"</span>&gt;</p>
                   <p class="text">filippo.tortelli@mail.polimi.it</p>
                   <p class="text">filippo.tortel@gmail.com</p>
                   <p class="text">(+39) 331 7719875</p>
@@ -154,7 +163,7 @@
       </div>
 
       <!-- BODY -->
-      <div class="navbar navbar-expand-lg" id="closed-body">
+      <div class="navbar navbar-expand-lg hide" id="closed-body">
         <div class="container-fluid justify-content-start" style="padding:0">
           <button onclick=openBody()>▲</button>
           <div><p class="body">&lt;body&gt;...&lt;/body&gt;</p></div>

@@ -45,3 +45,23 @@ function closeCurrently() {
   document.getElementById("closed-currently").classList.remove("hide");
   document.getElementById("opened-currently").classList.add("hide");
 }
+
+function openProjects() {
+  document.getElementById("closed-projects").classList.add("hide");
+  document.getElementById("opened-projects").classList.remove("hide");
+}
+
+function closeProjects() {
+  document.getElementById("closed-projects").classList.remove("hide");
+  document.getElementById("opened-projects").classList.add("hide");
+}
+
+function openContacts() {
+  document.getElementById("closed-contacts").classList.add("hide");
+  document.getElementById("opened-contacts").classList.remove("hide");
+}
+
+function closeContacts() {
+  document.getElementById("closed-contacts").classList.remove("hide");
+  document.getElementById("opened-contacts").classList.add("hide");
+}
