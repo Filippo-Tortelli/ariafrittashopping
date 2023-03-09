@@ -35,3 +35,13 @@ function closeAbout() {
   document.getElementById("closed-about").classList.remove("hide");
   document.getElementById("opened-about").classList.add("hide");
 }
+
+function openCurrently() {
+  document.getElementById("closed-currently").classList.add("hide");
+  document.getElementById("opened-currently").classList.remove("hide");
+}
+
+function closeCurrently() {
+  document.getElementById("closed-currently").classList.remove("hide");
+  document.getElementById("opened-currently").classList.add("hide");
+}

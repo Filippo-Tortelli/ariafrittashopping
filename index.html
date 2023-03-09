@@ -39,14 +39,14 @@
       <!-- HEAD -->
       <div class="navbar navbar-expand-lg" id="closed-head">
         <div class="container-fluid justify-content-start" style="padding:0">
-          <button onclick=openHead()>O</button>
+          <button onclick=openHead()>▲</button>
           <div ><p class="head">&lt;head&gt;...&lt;/head&gt;</p></div>
         </div>
       </div>
 
       <div class="navbar navbar-expand-lg hide" id="opened-head">
         <div class="container-fluid justify-content-start" style="padding:0">
-          <button onclick=closeHead()>C</button>
+          <button onclick=closeHead()>▼</button>
           <div>
             <p class="head">&lt;head&gt;</p>
             <p style="padding-left: 0px;"><span class="title">&lt;title&gt;</span><span class ="text">Filippo Tortelli portfolio, updated 2023</span><span class="title">&lt;/title&gt;</span></p>
@@ -58,14 +58,14 @@
       <!-- BODY -->
       <div class="navbar navbar-expand-lg hide" id="opened-body">
         <div class="container-fluid justify-content-start" style="padding:0">
-          <button onclick=closeBody()>C</button>
+          <button onclick=closeBody()>▼</button>
           <div id="bodyText">
             <p class="body">&lt;body&gt;</p>
 
             <!-- ABOUT -->
             <div class="navbar navbar-expand-lg" id="closed-about">
               <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=openAbout()>O</button>
+                <button onclick=openAbout()>▲</button>
                 <div id="aboutText">
                   <p>&lt;div <span class="id">id=</span><span>"about"</span>&gt;&lt;/div&gt;</p>
                 </div>
@@ -74,7 +74,7 @@
 
             <div class="navbar navbar-expand-lg hide" id="opened-about">
               <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=closeAbout()>C</button>
+                <button onclick=closeAbout()>▼</button>
                 <div id="aboutText">
                   <p>&lt;div <span class="id">id=</span><span>"about"</span>&gt;</p>
                   <p style="max-width: 50vw;"><span class="text">Mi chiamo Filippo Tortelli, sono un designer della comunicazione, e attualmente vivo a Milano. Di seguito, trovate una raccolta dei miei lavori più significativi, che riflette le mie attitudini e i principali campi di applicazione.</p>
@@ -85,15 +85,27 @@
             </div>
 
             <!-- CURRENTLY -->
-            <div class="navbar navbar-expand-lg">
+            <div class="navbar navbar-expand-lg" id="closed-currently">
               <div class="container-fluid justify-content-start" style="padding:0">
-                <button id="currentlyButton" onclick=switchCurrently()>›</button>
+                <button onclick=openCurrently()>▲</button>
                 <div id="currentlyText">
                   <p>&lt;div <span class="id">id=</span><span>"currently"</span>&gt;&lt;/div&gt;</p>
                 </div>
               </div>
             </div>
 
+            <div class="navbar navbar-expand-lg hide" id="opened-currently">
+              <div class="container-fluid justify-content-start" style="padding:0">
+                <button onclick=closeCurrently()>▼</button>
+                <div id="currentlyText">
+                  <p>&lt;div <span class="id">id=</span><span>"currently"</span>&gt;</p>
+                  <p style="max-width: 50vw;"><span class="text">Laurea Magistrale in Design della Comunicazione presso Politecnico di Milano</p>
+                  <p>&lt;/div&gt;</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECTS -->
             <div class="navbar navbar-expand-lg">
               <div class="container-fluid justify-content-start" style="padding:0">
                 <button id="projectsButton" onclick=switchProjects()>›</button>
@@ -112,22 +124,39 @@
               </div>
             </div>
 
-            <div class="navbar navbar-expand-lg">
+            <!-- CONTACTS -->
+            <div class="navbar navbar-expand-lg" id="closed-currently">
               <div class="container-fluid justify-content-start" style="padding:0">
-                <button id="contactsButton" onclick=switchContacts()>›</button>
-                <div id="contactsText">
-                  <p>&lt;div <span class="id">id=</span><span>"contacts"</span>&gt;&lt;/div&gt;</p>
+                <button onclick=openCurrently()>▲</button>
+                <div id="currentlyText">
+                  <p>&lt;div <span class="id">id=</span><span>"currently"</span>&gt;&lt;/div&gt;</p>
                 </div>
               </div>
             </div>
+
+            <div class="navbar navbar-expand-lg hide" id="opened-currently">
+              <div class="container-fluid justify-content-start" style="padding:0">
+                <button onclick=closeCurrently()>▼</button>
+                <div id="currentlyText">
+                  <p>&lt;div <span class="id">id=</span><span>"currently"</span>&gt;</p>
+                  <p class="text">filippo.tortelli@mail.polimi.it</p>
+                  <p class="text">filippo.tortel@gmail.com</p>
+                  <p class="text">(+39) 331 7719875</p>
+                  <p>&lt;/div&gt;</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- BODY -->
             <p class="body">&lt;/body&gt;</p>
           </div>
         </div>
       </div>
 
+      <!-- BODY -->
       <div class="navbar navbar-expand-lg" id="closed-body">
         <div class="container-fluid justify-content-start" style="padding:0">
-          <button onclick=openBody()>O</button>
+          <button onclick=openBody()>▲</button>
           <div><p class="body">&lt;body&gt;...&lt;/body&gt;</p></div>
         </div>
       </div>
