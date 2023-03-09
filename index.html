@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="p5.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <nav hidden id="cover" class="navbar">
+      <form class="container-fluid justify-content-start" style="padding:0">
+        <button>Filippo Tortelli portfolio, updated may 2023</button>
+      </form>
+    </nav>
+    <div id="menu" class="navbar navbar-expand-lg">
+      <div class="container-fluid justify-content-start" style="padding:0">
+        <button>elements</button>
+        <button>console</button>
+        <button>sources</button>
+        <button>...</button>
+        <button id="filter">Filter</button>
+
+      </div>
+    </div>
+
+    <div id="bloccoditesto">
+      <p class="id">&lt;!DOCTYPE html&gt;</p>
+      <p class="html">&lt;html&gt;</p>
+
+      <!-- HEAD -->
+      <div class="navbar navbar-expand-lg" id="closed-head">
+        <div class="container-fluid justify-content-start" style="padding:0">
+          <button onclick=openHead()>O</button>
+          <div ><p class="head">&lt;head&gt;...&lt;/head&gt;</p></div>
+        </div>
+      </div>
+
+      <div class="navbar navbar-expand-lg hide" id="opened-head">
+        <div class="container-fluid justify-content-start" style="padding:0">
+          <button onclick=closeHead()>C</button>
+          <div>
+            <p class="head">&lt;head&gt;</p>
+            <p style="padding-left: 0px;"><span class="title">&lt;title&gt;</span><span class ="text">Filippo Tortelli portfolio, updated 2023</span><span class="title">&lt;/title&gt;</span></p>
+            <p class="head">&lt;/head&gt;</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="navbar navbar-expand-lg hide" id="opened-body">
+        <div class="container-fluid justify-content-start" style="padding:0">
+          <button onclick=closeBody()>C</button>
+          <div id="bodyText">
+            <p class="body">&lt;body&gt;</p>
+
+            <!-- ABOUT -->
+            <div class="navbar navbar-expand-lg" id="closed-about">
+              <div class="container-fluid justify-content-start" style="padding:0">
+                <button onclick=openAbout()>O</button>
+                <div id="aboutText">
+                  <p>&lt;div <span class="id">id=</span><span>"about"</span>&gt;&lt;/div&gt;</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="navbar navbar-expand-lg hide" id="opened-about">
+              <div class="container-fluid justify-content-start" style="padding:0">
+                <button onclick=closeAbout()>C</button>
+                <div id="aboutText">
+                  <p>&lt;div <span class="id">id=</span><span>"about"</span>&gt;</p>
+                  <p style="max-width: 50vw;"><span class="text">Mi chiamo Filippo Tortelli, sono un designer della comunicazione, e attualmente vivo a Milano. Di seguito, trovate una raccolta dei miei lavori più significativi, che riflette le mie attitudini e i principali campi di applicazione.</p>
+                  <p><span class="text">Se vuoi, puoi scaricare il <a href="https://www.raiplay.it/programmi/lamelevisione" target="_blank">curriculum</a></p>
+                  <p>&lt;/div&gt;</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CURRENTLY -->
+            <div class="navbar navbar-expand-lg">
+              <div class="container-fluid justify-content-start" style="padding:0">
+                <button id="currentlyButton" onclick=switchCurrently()>›</button>
+                <div id="currentlyText">
+                  <p>&lt;div <span class="id">id=</span><span>"currently"</span>&gt;&lt;/div&gt;</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="navbar navbar-expand-lg">
+              <div class="container-fluid justify-content-start" style="padding:0">
+                <button id="projectsButton" onclick=switchProjects()>›</button>
+                <div id="projectsText">
+                  <p>&lt;div <span class="id">id=</span><span>"projects"</span>&gt;</p>
+                  <ol class="text">
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                  </ol>
+                  <p>&lt;/div&gt;</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="navbar navbar-expand-lg">
+              <div class="container-fluid justify-content-start" style="padding:0">
+                <button id="contactsButton" onclick=switchContacts()>›</button>
+                <div id="contactsText">
+                  <p>&lt;div <span class="id">id=</span><span>"contacts"</span>&gt;&lt;/div&gt;</p>
+                </div>
+              </div>
+            </div>
+            <p class="body">&lt;/body&gt;</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar navbar-expand-lg" id="closed-body">
+        <div class="container-fluid justify-content-start" style="padding:0">
+          <button onclick=openBody()>O</button>
+          <div><p class="body">&lt;body&gt;...&lt;/body&gt;</p></div>
+        </div>
+      </div>
+
+      <p class="html">&lt;/html&gt;</p>
+    </div>
+  </body>
+</html>
