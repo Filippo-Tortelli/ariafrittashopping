@@ -150,3 +150,8 @@ a:hover {
   border-width: 1.5px;
   border-color: #494C50;
 }
+
+button p:hover, button p:hover span {
+  background-color: #737373;
+  color: white !important;
+}
