@@ -56,6 +56,26 @@ function closeProjects() {
   document.getElementById("opened-projects").classList.add("hide");
 }
 
+function openProject1() {
+  document.getElementById("closed-project1").classList.add("hide");
+  document.getElementById("opened-project1").classList.remove("hide");
+}
+
+function closeProject1() {
+  document.getElementById("closed-project1").classList.remove("hide");
+  document.getElementById("opened-project1").classList.add("hide");
+}
+
+function openProject2() {
+  document.getElementById("closed-project2").classList.add("hide");
+  document.getElementById("opened-project2").classList.remove("hide");
+}
+
+function closeProject2() {
+  document.getElementById("closed-project2").classList.remove("hide");
+  document.getElementById("opened-project2").classList.add("hide");
+}
+
 function openContacts() {
   document.getElementById("closed-contacts").classList.add("hide");
   document.getElementById("opened-contacts").classList.remove("hide");

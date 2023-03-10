@@ -67,7 +67,7 @@ body {
 }
 
 
-p {
+p, .title {
   font-size: 20px;
   line-height: 1.25;
   font-weight: 400;
@@ -98,16 +98,8 @@ li, .text {
   font-weight: 600;
 }
 
-.text {
-  width: 60vw;
-}
-
 li {
   padding-left: 15px;
-}
-
-.title {
-  color: dodgerblue;
 }
 
 .head, .html, .body {
@@ -140,4 +132,21 @@ a {
 
 a:hover {
   color: gray;
+}
+
+.projectSpace {
+  background-color: #737373;
+  height: 75vh;
+}
+
+.secondText {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-width: 1.5px;
+  border-color: #494C50;
 }
