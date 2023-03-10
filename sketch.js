@@ -59,6 +59,7 @@ function closeProjects() {
 function openProject1() {
   document.getElementById("closed-project1").classList.add("hide");
   document.getElementById("opened-project1").classList.remove("hide");
+  closeProject2();
 }
 
 function closeProject1() {
@@ -69,6 +70,7 @@ function closeProject1() {
 function openProject2() {
   document.getElementById("closed-project2").classList.add("hide");
   document.getElementById("opened-project2").classList.remove("hide");
+  closeProject1();
 }
 
 function closeProject2() {
