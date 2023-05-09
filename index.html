@@ -5,215 +5,28 @@
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="p5.min.js"></script>
     <script src="p5.sound.min.js"></script>
     <script src="sketch.js"></script>
   </head>
   <body>
-    <nav hidden id="cover" class="navbar">
-      <form class="container-fluid justify-content-start" style="padding:0">
-        <button>Filippo Tortelli portfolio, updated may 2023</button>
-      </form>
-    </nav>
-    <div id="menu" class="navbar navbar-expand-lg">
-      <div class="container-fluid justify-content-start" style="padding:0">
-        <button>elements</button>
-        <button>console</button>
-        <button>sources</button>
-        <button>...</button>
-        <button id="filter">Filter</button>
-
+    <div id="menu">
+      <p>Mi chiamo Filippo Tortelli, sono un designer della comunicazione, e attualmente vivo a Milano.
+        Di seguito, trovate una raccolta dei miei lavori più significativi, che riflette le mie attitudini e i principali campi di applicazione
+        <br><a>about</a> • <a>contacts</a></p>
+      <div>
+        <div class="tags hide" id="tag-project"><h2>polimi</h2><h2>animation</h2><h2>development</h2></div>
+      <p>Dickies Website Maintenance • Minesweeper • Aria Fritta Pro • <a href="projects/animalfarmredacted.html">Animal Farm (Redacted)</a> • <a onmouseover=openTag() onmouseleave=closeTag() href="aec.html">Accessibilità è Coinvolgimento</a> • Rap Dojo • The Nembro Files • <a>Glowing Generation</a></p>
+      <!-- <div id="detail">
+        <p>updated 2023</p>
+        <p>lorem ipsum</p>
+        <p>licensed</p>
+      </div> -->
       </div>
     </div>
 
-    <div id="bloccoditesto">
-      <p class="id">&lt;!DOCTYPE html&gt;</p>
-      <p class="html">&lt;html&gt;</p>
-
-      <!-- HEAD -->
-      <div class="navbar navbar-expand-lg hide" id="closed-head">
-        <div class="container-fluid justify-content-start" style="padding:0">
-          <button onclick=openHead()>▲</button>
-          <div ><p class="head">&lt;head&gt;...&lt;/head&gt;</p></div>
-        </div>
-      </div>
-
-      <div class="navbar navbar-expand-lg" id="opened-head">
-        <div class="container-fluid justify-content-start" style="padding:0">
-          <button onclick=closeHead()>▼</button>
-          <div>
-            <p class="head">&lt;head&gt;</p>
-            <p style="padding-left: 0px;"><span class="title">&lt;title&gt; </span><span class ="text">Filippo Tortelli portfolio, updated 2023</span><span class="title"> &lt;/title&gt;</span></p>
-            <p class="head">&lt;/head&gt;</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- BODY -->
-      <div class="navbar navbar-expand-lg" id="opened-body">
-        <div class="container-fluid justify-content-start" style="padding:0">
-          <button onclick=closeBody()>▼</button>
-          <div id="bodyText">
-            <p class="body">&lt;body&gt;</p>
-
-            <!-- ABOUT -->
-            <div class="navbar navbar-expand-lg" id="closed-about">
-              <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=openAbout()>▲</button>
-                <div id="aboutText">
-                  <p>&lt;div <span class="id">id=</span><span>"about"</span>&gt;&lt;/div&gt;</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="navbar navbar-expand-lg hide" id="opened-about">
-              <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=closeAbout()>▼</button>
-                <div id="aboutText">
-                  <p>&lt;div <span class="id">id=</span><span>"about"</span>&gt;</p>
-                  <p><span class="text">Mi chiamo Filippo Tortelli, sono un designer della comunicazione, e attualmente vivo a Milano. Di seguito, trovate una raccolta dei miei lavori più significativi, che riflette le mie attitudini e i principali campi di applicazione.</p>
-                  <p><span class="text">Se vuoi, puoi scaricare il <a href="https://www.raiplay.it/programmi/lamelevisione" target="_blank">curriculum</a></p>
-                  <p>&lt;/div&gt;</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- CURRENTLY -->
-            <div class="navbar navbar-expand-lg" id="closed-currently">
-              <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=openCurrently()>▲</button>
-                <div id="currentlyText">
-                  <p>&lt;div <span class="id">id=</span><span>"currently"</span>&gt;&lt;/div&gt;</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="navbar navbar-expand-lg hide" id="opened-currently">
-              <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=closeCurrently()>▼</button>
-                <div id="currentlyText">
-                  <p>&lt;div <span class="id">id=</span><span>"currently"</span>&gt;</p>
-                  <p><span class="text">Laurea Magistrale in Design della Comunicazione presso Politecnico di Milano</p>
-                  <p>&lt;/div&gt;</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- PROJECTS -->
-            <div class="navbar navbar-expand-lg hide" id="closed-projects">
-              <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=openProjects()>▲</button>
-                <div>
-                  <p>&lt;div <span class="id">id=</span><span>"projects"</span>&gt;&lt;/div&gt;</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="navbar navbar-expand-lg" id="opened-projects">
-              <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=closeProjects()>▼</button>
-                <div>
-                  <p>&lt;div <span class="id">id=</span><span>"projects"</span>&gt;</p>
-                  <div class="text">
-
-                    <!-- PROJECT 1 -->
-                    <div class="navbar navbar-expand-lg" id="closed-project1">
-                      <div class="container-fluid justify-content-start" style="padding:0">
-                        <button onclick=openProject1()>▲</button>
-                        <div>
-                          <button onclick=openProject1()><p>&lt;button <span class="id">onclick=</span><span>theNembroFiles()</span>&gt;&lt;/button&gt;</p></button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="navbar navbar-expand-lg hide" id="opened-project1">
-                      <div class="container-fluid justify-content-start" style="padding:0">
-                        <button onclick=closeProject1()>▼</button>
-                        <div>
-                          <p>&lt;button <span class="id">onclick=</span><span>theNembroFiles()</span>&gt;</p>
-                          <p class="text"><u>The Nembro Files</u> è un artefatto realizzato per documentare l’attività di co-design svolta del Comune di Nembro (BG), allo scopo di ripensare il ruolo, gli spazi e i servizi del Museo della Miniera e dell’Emigrazione, per favorire un nuovo protagonismo giovanile. L’attività nasce dalla collaborazione tra il Progetto Grafite dell’Associazione Rapsoidea e il Laboratorio di Sintesi Finale C2 di Design della Comunicazione Magistrale del Politecnico di Milano, un progetto che vede come obiettivo la connessione tra i giovani e il territorio. Il Progetto/665 è la proposta nata da questa attività di co-design con gli adolescenti di Nembro, per coinvolgere i giovani nembresi nelle attività del Museo della Miniera.</p>
-                          <p class="text secondText">(2021) Progetto universitario realizzato con Alessia Arosio, Lorenzo Barilla, Stefano Ferrari, Pietro Martina. Laboratorio di Sintesi Finale C2, docenti: Katia Goldoni, Francesca Piredda, Marco Ronchi</p>
-                          <div class="projectSpace">
-                          </div>
-                          <p>&lt;/button&gt;</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- PROJECT 2 -->
-                    <div class="navbar navbar-expand-lg" id="closed-project2">
-                      <div class="container-fluid justify-content-start" style="padding:0">
-                        <button onclick=openProject2()>▲</button>
-                        <div>
-                          <button onclick="openProject2()"><p>&lt;button <span class="id">onclick=</span><span>AnimalFarm(Redacted)()</span>&gt;&lt;/button&gt;</p></button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="navbar navbar-expand-lg hide" id="opened-project2">
-                      <div class="container-fluid justify-content-start" style="padding:0">
-                        <button onclick=closeProject2()>▼</button>
-                        <div>
-                          <p>&lt;button <span class="id">onclick=</span><span>AnimalFarm(Redacted)()</span>&gt;</p>
-                          <p class="text"><u>Animal Farm (Redacted)</u> è una rimediazione digitale di Animal Farm, il romanzo di George Orwell. In questa nuova forma, il testo stesso è strettamente legato alla storia e al significato della narrazione. Animal Farm riflette sul modo in cui il controllo delle informazioni e la manipolazione della verità siano elementi fondamentali per consentire l’esercizio di qualsiasi potere autoritario. Per evidenziare questo concetto, il testo cambia mentre il lettore avanza nella lettura. Le pagine precedenti vengono censurate, redatte e modificate, così da essere costantemente coerenti con la verità attualmente dichiarata in quel particolare momento della storia. In questo modo, il testo imita la memoria dell’animale della fattoria, debole e continuamente ingannata dai maiali. Il sito web è scarno e non raffinato, imitando un documento classificato e enfatizzando ulteriormente l’atmosfera opprimente della storia. Attraverso il testo, il lettore può tornare ai capitoli precedenti e verificare cosa è cambiato.</p>
-                          <p class="text secondText">(2021) Progetto universitario realizzato con Alessia Arosio, Lorenzo Bernini, Pietro Martina. Corso di Digital Culture, docente: Giovanna Di Rosario</p>
-                          <div class="projectSpace">
-                          </div>
-                          <p>&lt;/button&gt;</p>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                  <p>&lt;/div&gt;</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- CONTACTS -->
-            <div class="navbar navbar-expand-lg" id="closed-contacts">
-              <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=openContacts()>▲</button>
-                <div>
-                  <p>&lt;div <span class="id">id=</span><span>"contacts"</span>&gt;&lt;/div&gt;</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="navbar navbar-expand-lg hide" id="opened-contacts">
-              <div class="container-fluid justify-content-start" style="padding:0">
-                <button onclick=closeContacts()>▼</button>
-                <div>
-                  <p>&lt;div <span class="id">id=</span><span>"contacts"</span>&gt;</p>
-                  <p class="text">filippo.tortelli@mail.polimi.it</p>
-                  <p class="text">filippo.tortel@gmail.com</p>
-                  <p class="text">(+39) 331 7719875</p>
-                  <p>&lt;/div&gt;</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- BODY -->
-            <p class="body">&lt;/body&gt;</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- BODY -->
-      <div class="navbar navbar-expand-lg hide" id="closed-body">
-        <div class="container-fluid justify-content-start" style="padding:0">
-          <button onclick=openBody()>▲</button>
-          <div><p class="body">&lt;body&gt;...&lt;/body&gt;</p></div>
-        </div>
-      </div>
-
-      <p class="html">&lt;/html&gt;</p>
+    <div id="sketch-holder">
     </div>
   </body>
 </html>

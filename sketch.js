@@ -1,89 +1,47 @@
-var headSwitch = 0;
+function preload(){
+  // put preload code here
+}
 
 function setup() {
-  // switchHead();
+  var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.parent('sketch-holder');
+  background(255);
+  // imgPreview();
 }
 
-function draw() {}
-
-function openHead() {
-  document.getElementById("closed-head").classList.add("hide");
-  document.getElementById("opened-head").classList.remove("hide");
+function draw() {
+  // put drawing code here
 }
 
-function closeHead() {
-  document.getElementById("closed-head").classList.remove("hide");
-  document.getElementById("opened-head").classList.add("hide");
+function imgPreview() {
+  for (let i = 0; i < 9; i++) {
+    let s = 100;
+    let x = random((width/2)-2*s, (width/2)+s);
+    let y = random((height/2)-2*s, (height/2)+s);
+    fill(200);
+    square(x,y,s*2);
+  }
+
+  console.log(frameCount);
+
+
+  if(frameCount%100==0) {
+  }
 }
 
-function openBody() {
-  document.getElementById("closed-body").classList.add("hide");
-  document.getElementById("opened-body").classList.remove("hide");
+function closeTag() {
+  document.getElementById("tag-project").classList.add("hide");
+  background(255);
 }
 
-function closeBody() {
-  document.getElementById("closed-body").classList.remove("hide");
-  document.getElementById("opened-body").classList.add("hide");
+function openTag() {
+  document.getElementById("tag-project").classList.remove("hide");
+  imgPreview();
 }
 
-function openAbout() {
-  document.getElementById("closed-about").classList.add("hide");
-  document.getElementById("opened-about").classList.remove("hide");
-}
-
-function closeAbout() {
-  document.getElementById("closed-about").classList.remove("hide");
-  document.getElementById("opened-about").classList.add("hide");
-}
-
-function openCurrently() {
-  document.getElementById("closed-currently").classList.add("hide");
-  document.getElementById("opened-currently").classList.remove("hide");
-}
-
-function closeCurrently() {
-  document.getElementById("closed-currently").classList.remove("hide");
-  document.getElementById("opened-currently").classList.add("hide");
-}
-
-function openProjects() {
-  document.getElementById("closed-projects").classList.add("hide");
-  document.getElementById("opened-projects").classList.remove("hide");
-}
-
-function closeProjects() {
-  document.getElementById("closed-projects").classList.remove("hide");
-  document.getElementById("opened-projects").classList.add("hide");
-}
-
-function openProject1() {
-  document.getElementById("closed-project1").classList.add("hide");
-  document.getElementById("opened-project1").classList.remove("hide");
-  closeProject2();
-}
-
-function closeProject1() {
-  document.getElementById("closed-project1").classList.remove("hide");
-  document.getElementById("opened-project1").classList.add("hide");
-}
-
-function openProject2() {
-  document.getElementById("closed-project2").classList.add("hide");
-  document.getElementById("opened-project2").classList.remove("hide");
-  closeProject1();
-}
-
-function closeProject2() {
-  document.getElementById("closed-project2").classList.remove("hide");
-  document.getElementById("opened-project2").classList.add("hide");
-}
-
-function openContacts() {
-  document.getElementById("closed-contacts").classList.add("hide");
-  document.getElementById("opened-contacts").classList.remove("hide");
-}
-
-function closeContacts() {
-  document.getElementById("closed-contacts").classList.remove("hide");
-  document.getElementById("opened-contacts").classList.add("hide");
+// projects
+function openDescription() {
+  console.log("ciao");
+  document.getElementById("descriptionClosed").classList.add("hide");
+  document.getElementById("descriptionOpened").classList.remove("hide");
 }
