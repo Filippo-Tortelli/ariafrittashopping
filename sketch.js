@@ -3,9 +3,10 @@ function preload(){
 }
 
 function setup() {
-  var cnv = createCanvas(windowWidth, windowHeight);
-  cnv.parent('sketch-holder');
+  // var cnv = createCanvas(windowWidth, windowHeight);
+  // cnv.parent('sketch-holder');
   background(255);
+  noCanvas();
   // imgPreview();
 }
 
@@ -29,14 +30,13 @@ function imgPreview() {
   }
 }
 
-function closeTag() {
-  document.getElementById("tag-project").classList.add("hide");
-  background(255);
+function closePreview() {
+  document.getElementById("projectPreview").classList.add("hide");
 }
 
-function openTag() {
-  document.getElementById("tag-project").classList.remove("hide");
-  imgPreview();
+function openPreview() {
+  document.getElementById("projectPreview").classList.remove("hide");
+  // imgPreview();
 }
 
 // projects
