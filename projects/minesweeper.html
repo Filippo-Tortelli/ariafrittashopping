@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="p5.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div id="menu">
+      <div class="rowElement">
+        <div>
+        <p id="descriptionClosed" style="text-indent: 0">Animal Farm (Redacted) <button onclick="openDescription()">more</button></p>
+        <div id="descriptionOpened" class="hide">
+          <p style="text-indent: 0">Animal Farm (Redacted) è una rimediazione digitale di Animal Farm,
+          il romanzo di George Orwell. In questa nuova forma, il testo stesso è
+          strettamente legato alla storia e al significato della narrazione. Animal Farm
+          riflette sul modo in cui il controllo delle informazioni e la manipolazione della
+          verità siano elementi fondamentali per consentire l’esercizio di qualsiasi
+          potere autoritario.</p>
+          <p>Per evidenziare questo concetto, il testo cambia mentre il
+          lettore avanza nella lettura. Le pagine precedenti vengono censurate, redatte
+          e modificate, così da essere costantemente coerenti con la verità attualmente
+          dichiarata in quel particolare momento della storia. In questo modo, il
+          testo imita la memoria dell’animale della fattoria, debole e continuamente
+          ingannata dai maiali. Il sito web è scarno e non raffinato, imitando un
+          documento classificato e enfatizzando ulteriormente l’atmosfera opprimente
+          della storia. Attraverso il testo, il lettore può tornare ai capitoli precedenti e
+          verificare cosa è cambiato <button onclick="closeDescription()">less</button>
+          </p>
+      </div>
+        </div>
+        <p><a href="/index.html">back</a></p>
+      </div>
+
+      <div id="imagesContainer">
+        <div id="imgProject" class="slider">
+          <img src="/img/preview/minesweeper/mine1.jpg" id="imgSlider1" onclick="newSlide1()"></img>
+          <img src="/img/preview/minesweeper/mine2.jpg" id="imgSlider2" class="hide" onclick="newSlide2()"></img>
+          <img src="/img/preview/minesweeper/mine3.jpg" id="imgSlider3" class="hide" onclick="newSlide3()"></img>
+        </div>
+      </div>
+
+      <div>
+        <div class="rowElement">
+          <p id="detailProject" class="hide" style="text-indent: 0">(2021) Progetto universitario realizzato con Alessia Arosio, Lorenzo Bernini, Pietro Martina.<br>Corso di Digital Culture, docente: Giovanna Di Rosario</p>
+          <p id="slideTitle" style="text-indent: 0">Lorem ipsum</p>
+          <p id="slideNumber" style="text-indent: 0">1/10</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -5,8 +5,8 @@
 
 body {
   margin: 0;
-  padding: 24px 8px 8px 8px;
-  height: calc(100vh - 32px);
+  padding: 8px;
+  height: calc(100vh - 16px);
   font-family: myfont;
   /* font-family: sans-serif; */
   /* color: #090ffb; */

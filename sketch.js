@@ -11,7 +11,17 @@ function setup() {
 }
 
 function draw() {
-  // put drawing code here
+  let speed = 30;
+  if (frameCount%speed==0) {
+    console.log("ciao");
+    document.getElementById("projectPreview").innerHTML = "<img class=\"preview\" src=\"img/preview/minesweeper/mine3.jpg\"></img>";
+} else if (frameCount%speed==speed*2/3) {
+    console.log("ciao");
+    document.getElementById("projectPreview").innerHTML = "<img class=\"preview\" src=\"img/preview/minesweeper/mine2.jpg\"></img>";
+  } else if (frameCount%speed==speed/3) {
+      console.log("ciao");
+      document.getElementById("projectPreview").innerHTML = "<img class=\"preview\" src=\"img/preview/minesweeper/mine1.jpg\"></img>";
+    }
 }
 
 function imgPreview() {

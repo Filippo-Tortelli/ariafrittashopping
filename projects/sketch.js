@@ -24,6 +24,11 @@ function newSlide1() {
 }
 
 function newSlide2() {
-  document.getElementById("imgSlider1").classList.remove("hide");
+  document.getElementById("imgSlider3").classList.remove("hide");
   document.getElementById("imgSlider2").classList.add("hide");
+}
+
+function newSlide3() {
+  document.getElementById("imgSlider1").classList.remove("hide");
+  document.getElementById("imgSlider3").classList.add("hide");
 }
